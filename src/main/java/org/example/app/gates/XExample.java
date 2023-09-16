@@ -1,12 +1,12 @@
-package org.example.not;
+package org.example.app.gates;
 
 import org.redfx.strange.*;
 import org.redfx.strange.gate.X;
 import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
 import org.redfx.strangefx.render.Renderer;
 
-
-public class NotGate {
+// The X gate is a single-qubit gate. It flips the qubit.
+public class XExample {
     public static void main(String[] args) {
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         Program program = new Program(1);

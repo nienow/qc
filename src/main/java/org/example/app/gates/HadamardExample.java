@@ -1,11 +1,13 @@
-package org.example.hadamard;
+package org.example.app.gates;
 
 import org.redfx.strange.*;
 import org.redfx.strange.gate.Hadamard;
 import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
 
-
-public class HadamardRandomBits {
+/*
+ * The Hadamard gate is a single-qubit gate. It puts the qubit in a superposition state.
+ */
+public class HadamardExample {
     public static void main(String[] args) {
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         Program program = new Program(1);

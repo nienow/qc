@@ -1,4 +1,4 @@
-package org.example.cnot;
+package org.example.app.gates;
 
 import com.sun.javafx.binding.StringFormatter;
 import org.redfx.strange.*;
@@ -8,7 +8,7 @@ import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
 /**
  * The cnot gate is a two-qubit gate. It flips the second qubit if the first qubit is 1.
  */
-public class CnotEntaglement {
+public class CnotExample {
     public static void main(String[] args) {
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         Program program = new Program(2);
