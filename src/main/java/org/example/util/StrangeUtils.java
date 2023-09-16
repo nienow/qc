@@ -1,13 +1,29 @@
 package org.example.util;
 
 import org.redfx.strange.Program;
+import org.redfx.strange.Qubit;
+import org.redfx.strange.Result;
 import org.redfx.strange.Step;
-import org.redfx.strange.gate.Cnot;
-import org.redfx.strange.gate.Cz;
-import org.redfx.strange.gate.Hadamard;
-import org.redfx.strange.gate.Measurement;
+import org.redfx.strange.gate.*;
+
+import java.util.Arrays;
 
 public class StrangeUtils {
+    public static void initTo1(Program program, int... qubit) {
+        Step step = new Step();
+        for (int i : qubit) {
+            step.addGate(new X(i));
+        }
+        program.addStep(step);
+    }
+
+    public static Integer[] measureBits(Result result) {
+        Qubit[] qubits = result.getQubits();
+        Integer[] measurements = Arrays.stream(qubits).map(Qubit::measure).toArray(Integer[]::new);
+        System.out.println("measurements: " + Arrays.toString(measurements));
+        return measurements;
+    }
+
     public static void entangle(Program program, int a, int b) {
         Step step1 = new Step();
         step1.addGate(new Hadamard(a));
