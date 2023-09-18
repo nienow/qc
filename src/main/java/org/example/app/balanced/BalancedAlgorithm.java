@@ -18,7 +18,7 @@ public class BalancedAlgorithm {
     static final int N = 5;
 
     public static void main(String[] args) {
-        int matrixDimensions = 2 << N; // 2^N power
+        int matrixDimensions = 2 << N; // 2*2^N power
 
         QuantumExecutionEnvironment simulator = new SimpleQuantumExecutionEnvironment();
         Program program = new Program(N + 1);
